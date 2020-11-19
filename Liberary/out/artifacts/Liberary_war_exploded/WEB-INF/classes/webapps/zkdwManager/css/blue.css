@@ -1,0 +1,19 @@
+.nav-tabs>li.active>a p{color:#fff;}
+.nav-tabs>li.active{background:url(../images/li-bg.png) no-repeat;}
+.head{background:#06477e;color:#fff;}
+.head a,.page-sidebar-top a,.page-sidebar_mini a{color:#fff;}
+.page-sidebar-top{background:#0061a6;}
+.page-sidebar,.page-sidebar_mini{background:#075091;color:#fff;}
+.page-sidebar-menu>li{background:url(../images/li-bg-l.png) no-repeat;}
+.page-sidebar-menu>li>a{color:#065396;}
+.page-sidebar-menu .sub-menu{background:#4884b5;}
+.sub-menu li>a{color:#fff;}
+.page-sidebar-menu>li>a{background:url(../images/arrow-r2.png) no-repeat right center;}
+.page-sidebar-menu>li.active>a{background:url(../images/arrow-d2.png) no-repeat right center;}
+.search{background:#eaf5fe;border-radius:5px;border:1px solid #9EB6CE;}
+.content_top{background:#eaf5fe;}
+.content_top_btn{background:#075091;color:#fff;border:1px solid #224781;}
+.table,.table>thead>tr,.table>tbody>tr{border:1px solid #9EB6CE;}
+.table>tbody>tr>td{border-top:1px solid #9EB6CE;}
+.table-head{font-weight:bold;background:#075091;color:#fff;}
+.jc-detail{background:#075091;}

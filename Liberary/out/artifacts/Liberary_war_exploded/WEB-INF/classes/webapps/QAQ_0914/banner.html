@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--引入bootstrap样式表-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+		<!-- 引入JQuery文件用于支持bootstrap.js的运行 -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!--引入bootstrap的js插件-->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+			img{
+				width: 100%;
+				
+			}
+		</style>
+		
+		<title>bootstrap实现轮播图</title>
+	</head>
+	<body>
+		<!-- 轮播插件-->
+		<div class="carousel slide" id="myCarousel" data-ride="carousel">
+			<!-- 轮播显示器(小圆点) -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			<!--被轮播的组件-->
+			<div class="carousel-inner" role="listbox"> 
+				<div class="item active">
+					<img src="img/17.jpg"/>
+				</div>
+				<div class="item">
+					<img src="img/19.jpg"/>
+				</div >
+				<div class="item">
+					<img src="img/20.jpg"/>
+				</div>
+				<div class="item">
+					<img src="img/23.jpg"/>
+				</div>
+			</div>
+			
+			<!-- 轮播控制器 -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+			
+		</div>
+		
+	</body>
+</html>

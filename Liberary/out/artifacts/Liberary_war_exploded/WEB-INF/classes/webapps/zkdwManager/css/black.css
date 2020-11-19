@@ -1,0 +1,19 @@
+.nav-tabs>li.active>a p{color:#fff;}
+.nav-tabs>li.active{background:#5c5757;}
+.head{background:#494949;color:#fff;}
+.head a,.page-sidebar-top a,.page-sidebar_mini a{color:#fff;}
+.page-sidebar-top{background:#494949;}
+.page-sidebar,.page-sidebar_mini{background:#707070;color:#fff;}
+.page-sidebar-menu>li{background:#5c5757;}
+.page-sidebar-menu>li>a{color:#fff;}
+.page-sidebar-menu .sub-menu{background:#fff;}
+.sub-menu li.active a{color:#e68c0c;}
+.page-sidebar-menu>li>a{background:url(../images/arrow-r.png) no-repeat right center;}
+.page-sidebar-menu>li.active>a{background:url(../images/arrow-d.png) no-repeat right center;}
+.search{background:#f7f4f0;}
+.content_top{background:#f7f4f0;}
+.content_top_btn{background:#5c5757;color:#fff;border:1px solid #2d2b2b;}
+.table,.table>thead>tr,.table>tbody>tr{border:1px solid #5c5757;}
+.table>tbody>tr>td{border-top:1px solid #5c5757;}
+.table-head{font-weight:bold;background:#5c5757;color:#fff;}
+.jc-detail{background:#5c5757;}

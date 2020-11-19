@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<style>
+			nav{
+				border-radius: 0 !important;
+			}
+			.error-msg{
+				color:#f00;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="" class="navbar-brand">MRZhou的个人博客</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="page-header">
+				<h3>信息完善</h3>
+			</div>
+			<div class="info-form">
+				<form action="" class="form-horizontal f1">
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">性别</label>
+						<div class="col-sm-7">
+							<div class="radio radio-inline">
+								<label>
+									<input type="radio" name="sex" value="男" checked=""/>男
+								</label>
+							</div>
+							<div class="radio radio-inline">
+								<label>
+									<input type="radio" name="sex" value="女"/>女
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">昵称</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" id="nickname" name="nickname"/>
+							<span class="error-msg"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">年龄</label>
+						<div class="col-sm-7">
+							<input type="number" class="form-control" id="age" name="age" min="0" max="180"/>
+							<span class="error-msg"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">手机号</label>
+						<div class="col-sm-7">
+							<input type="tel" class="form-control" id="phone" name="phone"/>
+							<span class="error-msg"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">邮箱地址</label>
+						<div class="col-sm-7">
+							<input type="email" class="form-control" id="email" name="email"/>
+							<span class="error-msg"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label col-sm-3">通信地址</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" id="addr" name="addr"/>
+							<span class="error-msg"></span>
+						</div>
+					</div>
+					<div class="form-group text-right">
+						<div class="col-sm-2 col-sm-offset-8">							
+							<button class="btn btn-primary btn-block">确认修改</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="container">
+				<div class="text-center text-muted">
+					<p>Copyright &copy; SOFTEEM MRZhou &nbsp;&nbsp; 2006 - 2018 &nbsp;&nbsp;All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+//				$('.btn').on('click',function(){
+//					alert('准备提交');
+//					$('.f1')[0].submit();
+//				})
+
+				$('.f1').on('submit',function(){
+					if($('#nickname').val().length<1 || !/^\w*$/.test($('#nickname').val())){
+						$('#nickname').next().text('昵称不能为空，且只能包含字母数字以及下划线');
+						return false
+					}else{
+						$('#nickname').next().text('');
+					}
+					if($('#age').val().length<1 || !($('#age').val()>=18&&$('#age').val()<=150)){
+						$('#age').next().text('年龄不能为空，且只能在18至150之间')
+						return false;
+					}else{
+						$('#age').next().text('');
+					}
+					
+				})
+			})
+		</script>
+	</body>
+</html>

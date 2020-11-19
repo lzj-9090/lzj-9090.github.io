@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="AreaPower"
+		table="zk_area_power"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+<!-- 		<property -->
+<!-- 			name="AreaId" -->
+<!-- 			column="area_id" -->
+<!-- 			type="integer" -->
+<!-- 			not-null="true" -->
+<!-- 			length="11" -->
+<!-- 		/> -->
+		
+		<many-to-one
+			name="area"
+			column="area_id"
+			class="Area"
+			not-null="true"
+		>
+		</many-to-one>
+		
+		<property
+			name="DataMonth"
+			column="data_month"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="PowerSupply"
+			column="power_supply"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="ElectricitySale"
+			column="electricity_sale"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="LosePower"
+			column="lose_power"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="LoseRate"
+			column="lose_rate"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="IsuueTime"
+			column="isuue_time"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+<!-- 		<property -->
+<!-- 			name="AdminId" -->
+<!-- 			column="admin_id" -->
+<!-- 			type="integer" -->
+<!-- 			not-null="true" -->
+<!-- 			length="11" -->
+<!-- 		/> -->
+
+		<many-to-one
+			name="admin"
+			column="admin_id"
+			class="Admin"
+			not-null="true"
+		>
+		</many-to-one>
+		
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

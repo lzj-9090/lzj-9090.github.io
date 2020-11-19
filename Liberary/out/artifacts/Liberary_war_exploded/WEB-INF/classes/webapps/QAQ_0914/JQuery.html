@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$('#btn').click(function(){
+					var $text = $(':text');
+					var i =0;
+					setInterval(function(){
+					$text.trigger('focus',function(){
+						var rp=Math.floor(Math.random()*100);
+						$text.eq(i++).trigger('focus');
+						if(i==$text.length){
+							clearInterval(id);
+						}
+					})
+				},500);
+			})
+			})	
+		</script>
+	</head>
+	<body>
+		亚丝娜	:<input type="text"/><br/>
+		桐人		:<input type="text"/><br/>
+		金闪闪	:<input type="text"/><br/>
+		Saber 	:<input type="text"/><br/>
+		时崎狂三	:<input type="text"/><br/>
+		折纸		:<input type="text"/><br/>
+		<input type="button" value="RP测试" id='btn'/><br/>
+	</body>
+</html>

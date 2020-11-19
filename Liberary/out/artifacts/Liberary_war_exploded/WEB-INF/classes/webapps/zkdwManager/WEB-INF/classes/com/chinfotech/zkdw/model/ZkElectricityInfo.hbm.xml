@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="ElectricityInfo"
+		table="zk_electricity_info"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="UserCode"
+			column="user_code"
+			type="string"
+			not-null="false"
+			length="40"
+		/>
+		<property
+			name="UserName"
+			column="user_name"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Address"
+			column="address"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		<property
+			name="UserType"
+			column="user_type"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="MeterNum"
+			column="meter_num"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="ContractCapacity"
+			column="contract_capacity"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="OperationCapacity"
+			column="operation_capacity"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="MeterOrder"
+			column="meter_order"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="PowerCategory"
+			column="power_category"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="PayAway"
+			column="pay_away"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="PowerPrice"
+			column="power_price"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="PayData"
+			column="pay_data"
+			type="string"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="PowerCount"
+			column="power_count"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		<property
+			name="PowerAmount"
+			column="power_amount"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		<property
+			name="MeterName"
+			column="meter_name"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="IssueTime"
+			column="issue_time"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="yearMonths"
+			column="year_months"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+ 		<property 
+ 			name="AdminId" 
+ 			column="admin_id" 
+ 			type="integer" 
+ 			not-null="false" 
+ 			length="11" 
+ 		/> 
+		
+<!-- 		<many-to-one -->
+<!-- 			name="admin" -->
+<!-- 			column="admin_id" -->
+<!-- 			class="Admin" -->
+<!-- 			not-null="false" -->
+<!-- 		> -->
+<!-- 		</many-to-one> -->
+
+
+	</class>	
+</hibernate-mapping>

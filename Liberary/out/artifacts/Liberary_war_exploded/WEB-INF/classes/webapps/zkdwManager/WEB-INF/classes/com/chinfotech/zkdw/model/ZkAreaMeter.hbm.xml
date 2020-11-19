@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="AreaMeter"
+		table="zk_area_meter"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="AreaCode"
+			column="area_code"
+			type="string"
+			not-null="true"
+			length="100"
+		/>
+		<property
+			name="AreaName"
+			column="area_name"
+			type="string"
+			not-null="true"
+			length="100"
+		/>
+		<property
+			name="MeterCode"
+			column="meter_code"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		<property
+			name="CityCompany"
+			column="city_company"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="SuperiorCompany"
+			column="superior_company"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="PowerSupply"
+			column="power_supply"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="IsuueTime"
+			column="isuue_time"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="IsValid"
+			column="is_valid"
+			type="java.lang.Byte"
+			not-null="true"
+			length="1"
+		/>
+<!-- 		<property -->
+<!-- 			name="AdminId" -->
+<!-- 			column="admin_id" -->
+<!-- 			type="integer" -->
+<!-- 			not-null="true" -->
+<!-- 			length="11" -->
+<!-- 		/> -->
+		<many-to-one
+			name="admin"
+			column="admin_id"
+			class="Admin"
+			not-null="true"
+		>
+		</many-to-one>
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+		
+		<property
+			name="address"
+			column="address"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		
+		<property
+			name="gongdian"
+			column="gongdian"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		
+		<property
+			name="shoudian"
+			column="shoudian"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		
+		<property
+			name="meterren"
+			column="meterren"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		
+		<property
+			name="date"
+			column="date"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

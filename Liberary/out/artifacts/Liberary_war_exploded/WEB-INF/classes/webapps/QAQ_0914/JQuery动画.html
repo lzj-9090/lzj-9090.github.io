@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<title>JQuery动画</title>
+		<style type="text/css">
+			#d1{
+				border: 1px solid red;
+				width: 150px;
+				height: 80px;
+			}
+			img{
+				position: relative;
+			}
+			#d2{
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$('#btn1').click(f5);
+				$('#btn2').click(f6);
+				$('#btn3').click(f7);
+				$('#btn4').click(f8);
+				
+				function f1(){
+					$('img').hide(500,'linear');
+				}
+				function f2(){
+					$('img').show();
+				}
+				function f3(){
+					$('img').slideUp('slow');
+				}
+				function f4(){
+					$('img').slideDown('slow');
+				}
+				function f5(){
+					$('img').fadeOut(1000,function(){
+						$('#d1').show();
+					});
+				}
+				function f6(){
+					$('img').fadeIn(1000);
+				}
+				function f7(){
+					$('img').animate({
+						left:'500px',
+//						top:'100px'
+					},1000).animate({top:'300px'},1000).animate({left:'0px'},1000).animate({top:'0px'},1000)
+				}
+				
+				function f8(){
+					$('#d2').animate({width:'300px'},500).animate({height:'300px'},500).animate({height:'100px'},500).animate({width:'100px'},500);
+				}
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<p>
+			<input type="button" value="隐藏" id="btn1"/>
+			<input type="button" value="显示" id="btn2"/>
+			<input type="button" value="启动动画" id="btn3"/>
+			<input type="button" value="伸缩" id="btn4"/>
+		</p>
+		
+		
+		<img src="img/17.jpg"/>
+		<div id="d1" hidden>操作成功</div>
+		<div id="d2"></div>
+	</body>
+</html>

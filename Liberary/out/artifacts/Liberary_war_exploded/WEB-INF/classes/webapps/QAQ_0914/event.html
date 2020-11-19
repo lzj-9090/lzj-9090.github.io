@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<title></title>
+		<script>
+			$(function(){
+				$('#d1').on('click',function(e){
+					alert(e.target.nodeName);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="d1">
+			<p>这是一个短路</p>
+			<button>按钮</button>
+			<a>超链接</a>
+		</div>
+	</body>
+</html>

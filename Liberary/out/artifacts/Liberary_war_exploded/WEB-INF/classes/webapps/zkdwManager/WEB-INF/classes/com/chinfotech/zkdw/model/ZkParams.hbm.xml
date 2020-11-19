@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="Params"
+		table="zk_params"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="param_id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="ParamName"
+			column="param_name"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="ParamKey"
+			column="param_key"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="ParamValue"
+			column="param_value"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="Url"
+			column="url"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

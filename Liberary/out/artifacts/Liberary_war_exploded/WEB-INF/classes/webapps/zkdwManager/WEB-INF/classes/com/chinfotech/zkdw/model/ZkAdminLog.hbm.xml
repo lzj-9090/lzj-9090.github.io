@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="AdminLog"
+		table="zk_admin_log"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="LogTime"
+			column="log_time"
+			type="timestamp"
+			not-null="false"
+			length="19"
+		/>
+		<property
+			name="AdminId"
+			column="admin_id"
+			type="integer"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="LogType"
+			column="log_type"
+			type="integer"
+			not-null="false"
+			length="8"
+		/>
+		<property
+			name="LogInfo"
+			column="log_info"
+			type="string"
+			not-null="false"
+		/>
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<title>JQuery菜单效果</title>
+		<style>
+			ul{
+				list-style: none;
+				padding: 0;
+			}
+			.menu{
+				width: 150px;
+			}
+			.menu>li>a,.hmenu>li>a{
+				display: block;
+				width: 150px;
+				background-color: rgb(57, 175, 255);
+				height: 40px;
+				text-decoration: none;
+				text-align: center;
+				line-height: 40px;
+				padding: 5px 0;
+				font-size: 20px;
+				color: #fff;
+			}
+			.menu>li:not(:last-child){
+				border-bottom:1.3px solid #fff;
+			}
+			.submenu>li>a,.hsubmenu>li>a{
+				display: block;
+				width: 150px;
+				height: 30px;
+				text-decoration: none;
+				padding: 5px 0;
+				background-color: rgba(57, 175, 255, 0.5);
+				text-align: center;
+				line-height: 30px;
+				border-bottom: 1px solid #fff;
+				color: #fff;
+			}
+			.hmenu>li{
+				float: left;
+			}
+			.hmenu>li:not(:last-child){
+				border-right: 1.5px solid #fff;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			$(function(){
+				//将页面中的所有空链接失效
+				$('a[href=""]').attr('href','javascript:void(0)');
+				//垂直下拉菜单效果
+				$('.menu>li>a').click(function(){
+					$(this).next().slideToggle(500);
+				})
+				//水平悬停下拉效果
+				$('.hmenu>li').hover(function(){
+					$(this).children('.hsubmenu').stop().slideDown();
+				},function(){
+					$(this).children('.hsubmenu').stop().slideUp();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="menu">
+			<li>
+				<a href="">商品管理</a>
+				<ul class="submenu" hidden>
+					<li><a href="">类别列表</a></li>
+					<li><a href="">商品列表</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">库存管理</a>
+				<ul class="submenu" hidden>
+					<li><a href="">库存详情</a></li>
+					<li><a href="">补货区</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">供应商管理</a>
+				<ul class="submenu" hidden>
+					<li><a href="">供应商列表</a></li>
+					<li><a href="">候补区</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">系统设置</a>
+				<ul class="submenu" hidden>
+					<li><a href="">个人信息</a></li>
+					<li><a href="">修改密码</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		
+		
+		<br />
+		<br />
+		<br />
+		
+		<ul class="hmenu">
+			<li>
+				<a href="">商品管理</a>
+				<ul class="hsubmenu" hidden>
+					<li><a href="">类别列表</a></li>
+					<li><a href="">商品列表</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">库存管理</a>
+				<ul class="hsubmenu" hidden>
+					<li><a href="">库存详情</a></li>
+					<li><a href="">补货区</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">供应商管理</a>
+				<ul class="hsubmenu" hidden>
+					<li><a href="">供应商列表</a></li>
+					<li><a href="">候补区</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">系统设置</a>
+				<ul class="hsubmenu" hidden>
+					<li><a href="">个人信息</a></li>
+					<li><a href="">修改密码</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

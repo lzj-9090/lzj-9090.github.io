@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 引入bootstrap样式表 -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<!-- 引入bootstrapValidator样式表 -->
+		<link rel="stylesheet" href="bootstrapvalidator/css/bootstrapValidator.min.css"/>
+		<!-- 引入JQuery文件 -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- 导入bootstrap的js库 -->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+		<!-- 导入bootstrap validator的js库 -->
+		<script type="text/javascript" src="bootstrapvalidator/js/bootstrapValidator.min.js" ></script>
+		<!-- 导入语言包 -->
+		<script type="text/javascript" src="bootstrapvalidator/js/language/zh_CN.js" ></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<form action="" class="form-horizontal myform">
+					<div class="form-group">
+						<label class="control-label col-sm-2">昵称:</label>
+						<input type="text" name="username" class="form-control"/>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				//为指定的表单控件绑定验证函数
+				$('.myform').bootstrapValidator({
+					//默认错误的提示信息
+					message:'这不是一个有效的值',
+					//反馈图标样式
+					feedbackIcons: {
+						//验证通过的样式
+			            valid: 'glyphicon glyphicon-ok',
+			            //验证错误的样式
+			            invalid: 'glyphicon glyphicon-remove',
+			            //验证中的样式
+			            validating: 'glyphicon glyphicon-refresh'
+			        },
+			        //需要验证的字段
+			        fields:{
+			        	//通过name属性获取验证字段
+			        	username:{
+			        		//验证错误信息
+			        		message:'用户名验证不通过',
+			        		//验证器
+			        		validators:{
+			        			//不为空验证
+			        			 notEmpty: {
+				                        message: '用户名不能为空'
+				                    },
+				                    //长度验证
+				                    stringLength: {
+				                        min: 6,
+				                        max: 15,
+				                        message: '用户名只能为6-15个字符'
+				                    },
+				                    //格式验证
+				                    regexp: {
+				                        regexp: /^\w*$/,
+				                        message: '用户名只能是字母数字以及下划线'
+				                    }
+							}
+			        	}
+			        	
+			        }
+				})
+			})
+		</script>
+		
+		
+	</body>
+</html>

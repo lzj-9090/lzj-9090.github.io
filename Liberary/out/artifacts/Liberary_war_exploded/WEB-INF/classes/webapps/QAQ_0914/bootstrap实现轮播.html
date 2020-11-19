@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--引入bootstrap样式表-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+		<!-- 引入JQuery文件用于支持bootstrap.js的运行 -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!--引入bootstrap的js插件-->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+			img{
+				width: 100%;
+				
+			}
+			.jumbotron{
+				background-color: rgba(232,223,196,0.5);
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(function(){
+//				控制轮播切换时间
+			$('#myCarousel').carousel({
+				interval:2000
+			})
+			})
+		/script>
+	</head>
+	<body>
+		<!--轮播插件-->
+		<div class="carousel" id="myCarousel" data-ride="carousel">
+			<!--轮播显示器（小圆点）-->
+			<ol class="carousel-indicators">
+				<li data-target = "#myCarousel" data-slide= "0" class="active"></li>
+				<li data-target = "#myCarousel" data-slide= "1"></li>
+				<li data-target = "#myCarousel" data-slide= "2"></li>
+				<li data-target = "#myCarousel" data-slide= "3"></li>
+			</ol>
+			<!--被轮播的组建-->
+			<div class="carousel-inner" role="listbox"> 
+				<div class="item active">
+					<img src="img/24.jpg"/>
+						<!-- 轮播标题组件 -->
+						<div class="carousel-caption">
+				        	<div class="jumbotron pull-left">
+				        		<h1>标题巨幕</h1>
+				        		<p>一出好戏</p>
+				        	</div>
+				        	
+				        	
+				        	
+				        	
+				        	
+				        	
+				    	</div>
+				</div>
+			<div class="item">
+				<img src="img/3819E98180B880FA03235FABFDB06F80.jpg" />
+			</div>
+			<div class="item">
+				<img src="img/B502E7BB9BD9450DA7811A0FCBD0333A.jpg" />
+			</div>
+			<div class="item">
+				<img src="img/ChMkJlbKzzSId5HDABXGsUjZTQwAALJSwFpIucAFcbJ736.jpg" />
+			</div>
+		</div>
+		
+		<!--轮播控制器-->
+		<a class="left carousel-control" href="#myCarou" data-slide = "prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+		</div>
+	</body>
+</html>

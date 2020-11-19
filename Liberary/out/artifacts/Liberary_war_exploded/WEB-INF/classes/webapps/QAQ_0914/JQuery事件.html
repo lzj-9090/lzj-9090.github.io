@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-3.3.1.min.js"></script> <!--调用JS-->
+		<title>JQuery事件</title>
+		<script type="text/javascript">
+			//JQuery页面加载事件
+//			$(function(){
+//				
+//			})
+			
+			
+			$(function(){
+				//JQuery第一种事件后绑定方式
+//				$('input').on('click',function(){
+//					alert('弹个窗');
+//				});
+				//JQuery第二种事件后绑定方式
+//				$('input').click(function(){
+//					alert('弹个窗2');
+//				});
+				//JQuery第三种事件后绑定方式
+//				$('input').bind('click',function(){
+//					alert('弹个窗3');
+//				})
+
+				$('.btn').click(function(){
+					var name = $($(this).parent().siblings().get(0)).html();
+					alert(name);
+				})
+				
+		})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮"/>
+		
+		<table>
+		      <tr>
+		        <th>商品</th>
+		        <th>单价(元)</th>
+		        <th>颜色</th>
+		        <th>库存</th>
+		        <th>好评率</th>
+		        <th>操作</th>
+		      </tr>   
+		      <tr>
+		        <td>罗技M185鼠标</td>
+		        <td>80</td>
+		        <td>黑色</td>
+		        <td>893</td>
+		        <td>98%</td>
+		        <td align="center">
+		          <input type="button" value="加入购物车" class="btn"/>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>微软X470键盘</td>
+		        <td>150</td>
+		        <td>黑色</td>
+		        <td>9028</td>
+		        <td>96%</td>
+		        <td align="center">
+		          <input type="button" value="加入购物车" class="btn"/>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>洛克iphone6手机壳</td>
+		        <td>60</td>
+		        <td>透明</td>
+		        <td>672</td>
+		        <td>99%</td>
+		        <td align="center">
+		          <input type="button" value="加入购物车" class="btn"/>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>蓝牙耳机</td>
+		        <td>100</td>
+		        <td>蓝色</td>
+		        <td>8937</td>
+		        <td>95%</td>
+		        <td align="center">
+		          <input type="button" value="加入购物车" class="btn"/>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>金士顿U盘</td>
+		        <td>70</td>
+		        <td>红色</td>
+		        <td>482</td>
+		        <td>100%</td>
+		        <td align="center">
+		          <input type="button" value="加入购物车" class="btn"/>
+		        </td>
+		      </tr>
+		    </table>
+	</body>
+</html>

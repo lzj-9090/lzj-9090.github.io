@@ -1,0 +1,13 @@
+127.0.0.1 - - [04/Mar/2019:15:39:08 +0800] "GET / HTTP/1.1" 200 11452
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:39:09 +0800] "GET /dailysystem1/NewFile.jsp HTTP/1.1" 200 422
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:39:09 +0800] "GET /dailysystem1/%E2%80%9Ctest.js%E2%80%9D HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:39:09 +0800] "GET /dailysystem1/styles.css HTTP/1.1" 404 1040
+127.0.0.1 - - [04/Mar/2019:15:39:43 +0800] "GET / HTTP/1.1" 200 11452
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:04 +0800] "GET /dailysystem1/NewFile.jsp HTTP/1.1" 200 422
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:04 +0800] "GET /dailysystem1/%E2%80%9Ctest.js%E2%80%9D HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:04 +0800] "GET /dailysystem1/styles.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:11 +0800] "GET /dailysystem1/NewFile.jsp HTTP/1.1" 200 422
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:11 +0800] "GET /dailysystem1/%E2%80%9Ctest.js%E2%80%9D HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:11 +0800] "GET /dailysystem1/styles.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:11 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [04/Mar/2019:15:40:15 +0800] "GET /dailysystem1/styles.css HTTP/1.1" 404 1040

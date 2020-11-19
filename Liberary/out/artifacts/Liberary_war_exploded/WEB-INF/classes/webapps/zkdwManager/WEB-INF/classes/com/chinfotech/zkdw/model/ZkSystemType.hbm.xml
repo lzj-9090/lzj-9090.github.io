@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.chinfotech.zkdw.model">
+	<class
+		name="SystemType"
+		table="zk_system_type"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="TypeName"
+			column="type_name"
+			type="string"
+			not-null="true"
+			length="100"
+		/>
+		<property
+			name="TypeCode"
+			column="type_code"
+			type="string"
+			not-null="false"
+			length="60"
+		/>
+		<property
+			name="TypeMinValue"
+			column="type_min_value"
+			type="string"
+			not-null="false"
+			length="40"
+		/>
+		<property
+			name="TypeMaxValue"
+			column="type_max_value"
+			type="string"
+			not-null="false"
+			length="40"
+		/>
+		<property
+			name="IsValid"
+			column="is_valid"
+			type="java.lang.Byte"
+			not-null="true"
+			length="1"
+		/>
+		<property
+			name="SysType"
+			column="sys_type"
+			type="string"
+			not-null="false"
+			length="80"
+		/>
+		<property
+			name="Priority"
+			column="priority"
+			type="java.lang.Short"
+			not-null="false"
+			length="3"
+		/>
+		<property
+			name="Description"
+			column="description"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+		<property
+			name="Memo"
+			column="memo"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+
+
+	</class>	
+</hibernate-mapping>
